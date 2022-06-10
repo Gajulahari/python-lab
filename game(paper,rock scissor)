@@ -1,0 +1,22 @@
+import random
+u=input('enter chouse-rock,paper,scissor :')
+choises=['rock','paper','siss']
+c=random.choice(choises)
+print('com choise :',c)
+if u==c:
+    print('tie')
+elif u=='rock':
+    if c=='siss':
+        print('win')
+    else:
+        print('loose')
+elif u=='paper':
+    if c=='rock':
+        print('win')
+    else:
+        print('loose')
+elif u=='siss':
+    if c=='paper':
+        print('win')
+    else:
+        print('loose')
