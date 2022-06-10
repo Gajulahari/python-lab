@@ -1,0 +1,32 @@
+CASER CIPHER:
+
+import sys
+plain=input('enter string : ')
+key=int(input('key :'))
+print('cipher :' ,end='')
+for i in plain:
+    if i.isupper():
+        n=(ord(i)+key)%91
+        if n<65:
+            n+=65
+        print(chr(n),end='')
+    else:
+        n=(ord(i)+key)%123
+        if n<97:
+            n+=97
+        print(chr(n),end='')
+        
+  ---------------------------------------
+  Disarium:
+  
+  for i in range(1,1001):
+    i=str(i)
+    length=len(i)
+    org=i=int(i)
+    sum=0
+    while length>0:
+        sum+=(i%10)**length
+        i=i//10
+        length=length-1
+        if org==sum:
+            print('Disarium number is ',org)
