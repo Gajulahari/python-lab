@@ -2,8 +2,7 @@ def eliminate(matrix):
     c = 0
     n = len(matrix)
     for p in range(1, n):
-        if (matrix[c][p]
-            or not matrix[p][c]):
+        if (matrix[c][p] or not matrix[p][c]):
             c = p
     return c
 def check(c,matrix):
