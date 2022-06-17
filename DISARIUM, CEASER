@@ -28,5 +28,5 @@ for i in plain:
         sum+=(i%10)**length
         i=i//10
         length=length-1
-        if org==sum:
+    if org==sum:
             print('Disarium number is ',org)
