@@ -19,7 +19,7 @@ for i in plain:
   ---------------------------------------
   Disarium:
   
-  for i in range(1,1001):
+  for i in range(1,101):
     i=str(i)
     length=len(i)
     org=i=int(i)
@@ -29,4 +29,4 @@ for i in plain:
         i=i//10
         length=length-1
     if org==sum:
-            print('Disarium number is ',org)
+        print('Disarium number is ',org)
