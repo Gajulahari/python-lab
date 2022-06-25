@@ -1,4 +1,5 @@
-import os
+import os 
+import sys
 def display_files():
     print("Enter path to traverse: ")
     root_dir = input()
@@ -44,6 +45,6 @@ def display_menu():
     elif choice == 2:
         copy_contents_to_file()
     else:
-        exit()
+        sys.exit()
 if __name__ == "__main__":
     display_menu()
