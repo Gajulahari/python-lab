@@ -1,6 +1,7 @@
+# import xlsxwriter module
 import xlsxwriter
 # Workbook() takes one, non-optional, argument# which is the filename that we want to create.# The file is present in the working directory.
-workbook = xlsxwriter.Workbook(" linechart.xlsx" )
+workbook = xlsxwriter.Workbook(" hari.xlsx" )
 # The workbook object is then used to add new# worksheet via the add_worksheet() method.worksheet = workbook.add_worksheet()  # Defaults to Sheet1.
 # Create a new Format object to formats cells# in worksheets using add_format() method .
 # The properties of a cell that can be formatted include:# fonts, colors, patterns, borders, alignment and number formatting.# here we create bold format object .bold = workbook.add_format({"bold": 1})
@@ -46,11 +47,9 @@ chart.add_series(
         "categories": ["Sheet1", 1, 1, 8, 1],
         "values": ["Sheet1", 1, 3, 8, 3],
     })
-# Add a chart titlechart.set_title({"name": "Company Profit Analysis"})
-# Add x-axis labelchart.set_x_axis({"name": "Year"})
-# Add y-axis labelchart.set_y_axis({"name": "Profit (in Billions)"})
-# Set an Excel chart style.chart.set_style(4)
-# add chart to the worksheet with given# offset values at the top-left corner of# a chart is anchored to cell D2 .
+chart.set_title({"name": "Company Profit Analysis"})
+chart.set_x_axis({"name": "Year"})
+chart.set_y_axis({"name": "Profit (in Billions)"})
+chart.set_style(4)
 worksheet.insert_chart("D2", chart, {"x_offset": 25, "y_offset": 10})
-# Finally, close the Excel file# via the close() method.
 workbook.close()
