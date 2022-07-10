@@ -1,12 +1,10 @@
 import re
 
 
-# Function to Find all the patterns of "1(0+)1" in a given string
 def check_uc_lc_pattern(user_input):
-    # regex
     pattern = re.compile("[A-Z]+[a-z]+$")
 
-    # searching pattern
+   
     if pattern.search(user_input):
         print("String pattern match success \n")
     else:
@@ -14,19 +12,14 @@ def check_uc_lc_pattern(user_input):
 
 
 def count_pattern(user_input):
-    # search regex '10+1' in original string search() function return first occurrence
-    # of regex '10+1' otherwise None '10+1' means sub-string starting and ending with 1
-    # and at least 1 or more zeros in between
+   
     count = 0
     pattern = re.compile("10+1")
     substr = pattern.search(user_input)
 
-    # search for regex in original string until we are done with complete string
     while substr != None:
-        # if we find any occurrence then increase count by 1
         count = count + 1
 
-        # find next occurrence just after previous sub-string for first occurrence of the pattern
         user_input = user_input[(substr.end() - 1) :]
         substr = pattern.search(user_input)
     print(f"The number of times the pattern appears in the string is {count} \n")
@@ -35,10 +28,8 @@ def count_pattern(user_input):
 def z_followed_by_o(user_input):
     pattern = re.compile("zo+\w*")
 
-    # The findall() method returns all matching strings of the regex pattern
     match_object = pattern.findall(user_input)
 
-    # If length of match_object is not equal to zero then it contains matched string
     if len(match_object) != 0:
         print("String pattern match success \n")
     else:
