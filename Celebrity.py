@@ -1,4 +1,10 @@
-Celebrity python program
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Aug 12 22:21:07 2023
+
+@author: harik
+"""
+
 def eliminate(matrix):
     c = 0
     n = len(matrix)
@@ -9,7 +15,7 @@ def eliminate(matrix):
 def check(c,matrix):
     for i in range(n):
         if matrix[c][i] is True:
-hdsgj            return False
+            return False
     for i in range(n):
         if matrix[i][c] is False:
             if i != c:
