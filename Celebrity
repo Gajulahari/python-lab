@@ -1,4 +1,4 @@
-Celebrity python program
+Celebrity python programming
 def eliminate(matrix):
     c = 0
     n = len(matrix)
